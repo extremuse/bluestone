@@ -1,0 +1,233 @@
+//defineing the variables//
+
+$white: #ffffff;
+$blue:  #0856A2;
+
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/**************home-page**************/
+
+.first-container{
+    width: 100vw;
+    height: 100vh;
+    
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        font-size: 20px;
+        .header{
+            background-color: #000000;
+            height: 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .header-ineer{
+                width: 90%;      
+                .header-items{
+                    align-items: center;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    .left{
+                        display: flex;
+                        flex-direction: row;
+                        flex-grow: 2;
+
+                        .country{
+
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: left;
+                            .india , .europe{
+                                color:$white;
+                                font-size: 1rem;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                                border-right: #4b4b4b solid 2px;
+                            }
+                            .usa{
+                                color:$white;
+                                font-size: 1rem;
+                                padding-right: 10px;
+                                padding-left: 10px;
+                            }                            
+                        }                                
+                    }
+                    .right{
+                        display: flex;
+                        flex-direction: row;
+                        .contacts{                          
+                        padding-right: 30px;
+                        padding-left: 30px;                        
+                        border-right: #4b4b4b solid 2px;
+                            p{
+                                color: $white;
+                                display: flex;
+                                justify-content: center;
+                                font-size: 1rem;
+                                a{                                    
+                                color: $white;
+                                font-size: 1rem;
+                                text-decoration: none;
+                                }
+                            }
+                        }
+                        .email{                          
+                            padding-right: 30px;
+                            border-right: #4b4b4b solid 2px;
+                            padding-left: 30px;
+                            p{
+                                color: $white;
+                                font-size: 1rem;
+                                display: flex;
+                                justify-content: center;
+                                
+                                a{                                    
+                                color: $white;
+                                font-size: 1rem;
+                                text-decoration: none;
+                                }
+                            }
+                        }
+                        .social-icons{                          
+                            padding-right: 30px;
+                            padding-left: 30px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-evenly;
+                            .icons{
+                                color: $white;
+                                font-size: 1rem;
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+
+
+/*****************navbar*******************/
+
+        .navbar{
+            width: 100vw; 
+            margin-top: 10px;
+            .navbar-inner{
+                width: 90%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: auto;
+                justify-content: space-between;
+                .logo{
+                    flex-grow: 0;
+                    a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            .nav{
+                display: flex;
+                flex-grow: 3;
+                align-items: center;
+                justify-content: flex-end;
+                .nav-box{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                                    
+                    .nav-box-item{
+                        padding-right: 60px;
+                                    a{
+                                        color: #000000;
+                                        font-size: 1rem;
+                                        text-decoration: none;
+                                    }              
+                                   }
+                        }
+                    .hamburger{
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: center;
+                            .bars{
+                                width: 30px;
+                                height: 5px;
+                                border-radius: 2px;
+                                margin-bottom: 7px;
+                                background-color: #0856A2;
+                            }
+                                }                
+                .quote-button{
+                    button{
+                        background-color:$blue;
+                        padding: 10px 20px ;
+                        border: none;
+                        border-radius: 5px;
+                        a{
+                            text-decoration: none;
+                           color:$white;
+                           font-size: 1rem;
+                        }
+                            }
+                              }
+                }
+            }
+        }    
+    }
+}
+/***************navbarfunctional******************/
+
+@media(max-width:700px){
+                .hamburger{
+                    display: none !important;
+                    padding-top: 2px;
+                .bars:nth-child(2){
+                    opacity: 0%;
+                }
+                .bars:nth-child(1){
+                    transform: translateY(8px) rotate(45deg);
+                }
+                .bars:nth-child(3){
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+            .nav{
+                flex-direction: row-reverse;
+                .nav-box{
+                    flex-direction: column;
+                    top: 100px;
+                    left: 0px;
+                    background-color: #0856A2;
+                    width: 60%;
+                    height: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                
+                    
+                }
+                
+            }
+            .nav-box-item{
+                padding-right: 0px !important;// there is a problem in padding
+                a{
+                    color: #ffffff;
+                }
+            }
+            
+            
+        }
